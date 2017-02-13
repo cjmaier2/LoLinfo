@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using LoLInfo.Views;
+using Xamarin.Forms;
 
 namespace LoLInfo
 {
@@ -8,7 +9,14 @@ namespace LoLInfo
         {
             InitializeComponent();
 
-            MainPage = new LoLInfoPage();
+            MainPage = new TabbedPage
+            {
+                Children =
+                {
+                    new ChampionsView(),
+                    new ItemsView()
+                }
+            };
         }
 
         protected override void OnStart()

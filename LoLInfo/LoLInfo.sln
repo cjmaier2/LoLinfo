@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLInfo.iOS", "iOS\LoLInfo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLInfo.Droid", "Droid\LoLInfo.Droid.csproj", "{30042B8D-6CC3-4BD1-A270-5E366D171A5E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LolInfo.Services", "LolInfo.Services\LolInfo.Services.csproj", "{379864FB-7D06-4CE1-AC47-807833BFFEEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,17 @@ Global
 		{30042B8D-6CC3-4BD1-A270-5E366D171A5E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{30042B8D-6CC3-4BD1-A270-5E366D171A5E}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{30042B8D-6CC3-4BD1-A270-5E366D171A5E}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Release|iPhone.Build.0 = Release|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{379864FB-7D06-4CE1-AC47-807833BFFEEE}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
