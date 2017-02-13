@@ -1,2 +1,2 @@
 # LoLinfo
-Xamarin Forms app leveraging Riot Games League of Legends API to access game info
+Xamarin Forms app leveraging Riot Games API to access League of Legends game information
