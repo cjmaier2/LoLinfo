@@ -1,4 +1,5 @@
-﻿using LoLInfo.Views;
+﻿using LolInfo.Services.Services;
+using LoLInfo.Views;
 using Xamarin.Forms;
 
 namespace LoLInfo

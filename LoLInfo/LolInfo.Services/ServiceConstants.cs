@@ -6,6 +6,8 @@ namespace LolInfo.Services
         //Full Riot Games API Reference: https://developer.riotgames.com/api/methods
         //Static Data API Documentation: https://developer.riotgames.com/docs/static-data
 
+        public const string MyAPIKey = "Insert_API_Key_Here";
+
         //Image URLs
         public const string ItemImageUrl = "http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/{0}"; //http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/3146.png
         public const string ChampionSquareImageUrl = "http://ddragon.leagueoflegends.com/cdn/7.3.1/img/champion/{0}"; //http://ddragon.leagueoflegends.com/cdn/7.3.1/img/champion/Thresh.png
