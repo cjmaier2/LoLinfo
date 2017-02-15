@@ -8,6 +8,25 @@ namespace LolInfo.Services
 
         public const string MyAPIKey = "Insert_API_Key_Here";
 
+        //Region Constants
+        public const string CurrentRegionCode = NorthAmerica;
+        public const string Brazil = "BR";
+        public const string EuropeNordicAndEast = "EUNE";
+        public const string EuropeWest = "EUW";
+        public const string Japan = "JP";
+        public const string Korea = "KR";
+        public const string LatinAmericaNorth = "LAN";
+        public const string LatinAmericaSouth = "LAS";
+        public const string NorthAmerica = "NA";
+        public const string Oceania = "OCE";
+        public const string PublicBetaEnvironment = "PBE";
+        public const string Russia = "RU";
+        public const string Turkey = "TR";
+
+        //Service Call URLs
+        public const string BaseApiUrl = "https://global.api.pvp.net";
+        public const string GetChampionsUrl = "/api/lol/static-data/{0}/v1.2/champion"; //input: region
+
         //Image URLs
         public const string ItemImageUrl = "http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/{0}"; //http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/3146.png
         public const string ChampionSquareImageUrl = "http://ddragon.leagueoflegends.com/cdn/7.3.1/img/champion/{0}"; //http://ddragon.leagueoflegends.com/cdn/7.3.1/img/champion/Thresh.png
