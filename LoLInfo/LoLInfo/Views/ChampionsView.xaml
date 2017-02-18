@@ -5,5 +5,12 @@
 		xmlns:local="clr-namespace:LoLInfo.Views"
 		Title="Champions">
 	<ContentPage.Content>
+	<ListView x:Name="ChampionListView">
+	    <ListView.ItemTemplate>
+			<DataTemplate>
+				<TextCell Text="{Binding Name}" />
+			</DataTemplate>
+	    </ListView.ItemTemplate>
+  	</ListView>
 	</ContentPage.Content>
 </local:ChampionsViewBase>

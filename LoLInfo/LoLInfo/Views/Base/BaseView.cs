@@ -13,5 +13,10 @@ namespace LoLInfo
             ViewModel = new T();
             BindingContext = ViewModel;
         }
+
+        public void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            ((ListView)sender).SelectedItem = null;
+        }
     }
 }
