@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using LolInfo.Models;
 using LolInfo.Services.ServiceModels;
 
@@ -21,7 +22,7 @@ namespace LolInfo.Services.Extensions
                     SquareImageUrl = string.Format(ServiceConstants.ChampionSquareImageUrl, champ.Image.Full)
                 });
             }
-            return champions;
+            return champions.OrderBy(c => c.Name).ToList();
         }
     }
 }
