@@ -10,24 +10,35 @@ namespace LoLInfo
         {
             InitializeComponent();
 
-            MainPage = new TabbedPage
+            //tab icons taken from https://material.io/icons/
+            var championTab = new NavigationPage(new ChampionsView())
+            {
+                Title = "Champions",
+                BarBackgroundColor = Color.Black,
+                BarTextColor = Color.White
+            };
+            if (Device.OS == TargetPlatform.iOS)
+                championTab.Icon = new FileImageSource { File = "ic_face.png" };
+
+            var itemTab = new NavigationPage(new ItemsView())
+            {
+                Title = "Items",
+                BarBackgroundColor = Color.Black,
+                BarTextColor = Color.White
+            };
+            if (Device.OS == TargetPlatform.iOS)
+                itemTab.Icon = new FileImageSource { File = "ic_monetization_on.png" };
+            
+            var tabs = new TabbedPage
             {
                 Children =
                 {
-                    new NavigationPage(new ChampionsView())
-                    {
-                        Title = "Champions",
-                        BarBackgroundColor = Color.Black,
-                        BarTextColor = Color.White
-                    },
-                    new NavigationPage(new ItemsView())
-                    {
-                        Title = "Items",
-                        BarBackgroundColor = Color.Black,
-                        BarTextColor = Color.White
-                    }
+                    championTab,
+                    itemTab
                 }
             };
+
+            MainPage = tabs;
         }
 
         protected override void OnStart()

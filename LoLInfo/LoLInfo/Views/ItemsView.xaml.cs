@@ -12,8 +12,6 @@ namespace LoLInfo.Views
         public ItemsView()
         {
             InitializeComponent();
-            //if (Device.OS == TargetPlatform.iOS)
-            //    Icon = new FileImageSource { File = "todo.png" };
         }
     }
 }

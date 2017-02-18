@@ -15,8 +15,6 @@ namespace LoLInfo.Views
         public ChampionsView()
         {
             InitializeComponent();
-            //if (Device.OS == TargetPlatform.iOS)
-            //    Icon = new FileImageSource { File = "todo.png" };
 
             ChampionListView.ItemTapped += OnItemTapped;
             ChampionListView.IsPullToRefreshEnabled = true;
