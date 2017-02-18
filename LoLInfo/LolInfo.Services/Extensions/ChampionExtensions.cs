@@ -17,7 +17,8 @@ namespace LolInfo.Services.Extensions
                 {
                     Id = champ.Id,
                     Name = champ.Name,
-                    Title = champ.Title
+                    Title = champ.Title,
+                    SquareImageUrl = string.Format(ServiceConstants.ChampionSquareImageUrl, champ.Image.Full)
                 });
             }
             return champions;

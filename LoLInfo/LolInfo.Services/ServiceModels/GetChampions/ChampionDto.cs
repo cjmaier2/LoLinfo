@@ -13,7 +13,7 @@ namespace LolInfo.Services.ServiceModels
 
         public int Id { get; set; }
 
-        //public ImageDto Image { get; set; }
+        public ImageDto Image { get; set; }
 
         //public InfoDto Info { get; set; }
 

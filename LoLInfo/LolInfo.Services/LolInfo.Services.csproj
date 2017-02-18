@@ -35,6 +35,7 @@
     <Compile Include="ServiceModels\GetChampions\ChampionListDto.cs" />
     <Compile Include="ServiceModels\GetChampions\ChampionDto.cs" />
     <Compile Include="Extensions\ChampionExtensions.cs" />
+    <Compile Include="ServiceModels\GetChampions\ImageDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
