@@ -19,6 +19,7 @@ namespace LoLInfo.Views
             //    Icon = new FileImageSource { File = "todo.png" };
 
             ChampionListView.ItemTapped += OnItemTapped;
+            ChampionListView.IsPullToRefreshEnabled = true;
         }
 
         protected override async void OnAppearing()

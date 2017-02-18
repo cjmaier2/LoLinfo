@@ -51,6 +51,7 @@
     <Compile Include="Views\Base\BaseView.cs" />
     <Compile Include="ViewModels\ChampionsViewModel.cs" />
     <Compile Include="ViewModels\ItemsViewModel.cs" />
+    <Compile Include="Custom\RecycleListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -71,6 +72,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="ViewModels\Base\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Custom\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LolInfo.Services\LolInfo.Services.csproj">

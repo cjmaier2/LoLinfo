@@ -30,5 +30,21 @@ namespace LoLInfo.ViewModels
                 return false;
             }
         }
-    }
+
+        private Command refreshCommand;
+        public Command RefreshCommand
+        {
+            get
+            {
+                return refreshCommand ?? new Command(ExecuteRefreshCommand);
+            }
+        }
+
+        async void ExecuteRefreshCommand(object obj)
+        {
+            await LoadChampions();
+            IsBusy = false;
+        }
+
+   }
 }
