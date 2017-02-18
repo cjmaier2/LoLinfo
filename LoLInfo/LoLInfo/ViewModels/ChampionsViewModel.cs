@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using LolInfo.Models;
 using LolInfo.Services.Services;
 using Xamarin.Forms;
 
@@ -9,6 +11,8 @@ namespace LoLInfo.ViewModels
     {
         ChampionService ChampService { get; } = new ChampionService();
 
+        public List<Champion> Champions { get; private set; }
+
         public ChampionsViewModel()
         {
 
@@ -16,8 +20,15 @@ namespace LoLInfo.ViewModels
 
         public async Task<bool> LoadChampions()
         {
-            var champs = await ChampService.GetChampions();
-            return false;
+            try
+            {
+                Champions = await ChampService.GetChampions();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }
