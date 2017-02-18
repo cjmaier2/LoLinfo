@@ -14,8 +14,18 @@ namespace LoLInfo
             {
                 Children =
                 {
-                    new ChampionsView(),
-                    new ItemsView()
+                    new NavigationPage(new ChampionsView())
+                    {
+                        Title = "Champions",
+                        BarBackgroundColor = Color.Black,
+                        BarTextColor = Color.White
+                    },
+                    new NavigationPage(new ItemsView())
+                    {
+                        Title = "Items",
+                        BarBackgroundColor = Color.Black,
+                        BarTextColor = Color.White
+                    }
                 }
             };
         }
