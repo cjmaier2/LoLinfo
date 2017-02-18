@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using LolInfo.Models;
+using LolInfo.Services.Extensions;
+using LolInfo.Services.ServiceModels;
 using LolInfo.Services.Services;
+using Newtonsoft.Json;
 
 namespace LolInfo.Services.Services
 {
@@ -15,25 +18,17 @@ namespace LolInfo.Services.Services
         {
             using (var client = new HttpClient())
             {
-                var queryUrl = string.Format(ServiceConstants.GetChampionsUrl, ServiceConstants.CurrentRegionCode);
-                var url = GetRequestUrl(queryUrl);
+                var coreUrl = string.Format(ServiceConstants.GetChampionsUrl, ServiceConstants.CurrentRegionCode);
+                var queries = new List<string>() { "champData=all" };
+                var url = GetRequestUrl(coreUrl, queries);
                 var json = await client.GetStringAsync(url);
 
                 if (string.IsNullOrWhiteSpace(json))
                     return null;
 
-                return new List<Champion>();
-                //return DeserializeObject<Champion>(json);
+                var champsDto = JsonConvert.DeserializeObject<ChampionListDto>(json);
+                return champsDto.ToChampions();
             }
-
-            return new List<Champion>()
-            {
-                new Champion()
-                {
-                    Id = 1,
-                    Name = "Thresh"
-                }
-            };
         }
     }
 }
