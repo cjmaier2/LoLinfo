@@ -91,7 +91,14 @@ namespace LoLInfo.ViewModels
             }
             else
             {
-                Champions = new ObservableCollection<Champion>(AllChampions.Where(c => c.SearchName.Contains(searchText.ToUpper())).ToList());
+                if (string.IsNullOrWhiteSpace(searchText))
+                {
+                    Champions = new ObservableCollection<Champion>(AllChampions);
+                }
+                else
+                {
+                    Champions = new ObservableCollection<Champion>(AllChampions.Where(c => c.SearchName.Contains(searchText.ToUpper())).ToList());
+                }
             }
         }
    }
