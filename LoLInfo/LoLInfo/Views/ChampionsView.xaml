@@ -7,7 +7,7 @@
 		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
 		Title="Champions">
 	<ContentPage.Content>
-		<custom:RecycleListView
+		<ListView
 			x:Name="ChampionListView"
 			IsPullToRefreshEnabled="true"
 			RefreshCommand="{Binding RefreshCommand}"
@@ -17,6 +17,6 @@
 					<custom:CustomImageCell Name="{Binding Name}" Title="{Binding Title}" ImageSource="{Binding SquareImageUrl}"/>
 				</DataTemplate>
 		    </ListView.ItemTemplate>
-	  	</custom:RecycleListView>
+	  	</ListView>
 	</ContentPage.Content>
 </local:ChampionsViewBase>
