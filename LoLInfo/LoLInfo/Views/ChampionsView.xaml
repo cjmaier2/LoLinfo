@@ -4,6 +4,7 @@
 		x:Class="LoLInfo.Views.ChampionsView"
 		xmlns:local="clr-namespace:LoLInfo.Views"
 		xmlns:custom="clr-namespace:LoLInfo.Custom"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
 		Title="Champions">
 	<ContentPage.Content>
 		<custom:RecycleListView
@@ -13,7 +14,7 @@
 			IsRefreshing="{Binding IsBusy, Mode=OneWay}">
 		    <ListView.ItemTemplate>
 				<DataTemplate>
-					<ImageCell Text="{Binding Name}" Detail="{Binding Title}" ImageSource="{Binding SquareImageUrl}"/>
+					<custom:CustomImageCell ImageSource="{Binding SquareImageUrl}"/>
 				</DataTemplate>
 		    </ListView.ItemTemplate>
 	  	</custom:RecycleListView>

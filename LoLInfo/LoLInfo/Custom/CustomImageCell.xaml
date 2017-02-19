@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="LoLInfo.Custom.CustomImageCell"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
+	<Grid Padding="0">
+  		<Grid.RowDefinitions>
+		    <RowDefinition Height="*"></RowDefinition>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+		    <ColumnDefinition Width="40"></ColumnDefinition>
+		    <ColumnDefinition Width="20"></ColumnDefinition>
+	    </Grid.ColumnDefinitions>
+
+		<ffimageloading:CachedImage Grid.Row="0" Grid.Column="0"
+			HorizontalOptions="Center" VerticalOptions="Center"
+			WidthRequest="300" HeightRequest="300"
+			Source = "{Binding SquareImageUrl}">
+			</ffimageloading:CachedImage>
+	</Grid>
+</ViewCell>
