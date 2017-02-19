@@ -55,6 +55,8 @@ namespace LoLInfo.ViewModels
                 IsBusy = true;
                 AllChampions = await ChampService.GetChampions();
                 Champions = new ObservableCollection<Champion>(AllChampions);
+                if (!string.IsNullOrWhiteSpace(searchText)) //user could enter search text before champions finish loading
+                    FilterChampions();
                 return true;
             }
             catch (Exception ex)
