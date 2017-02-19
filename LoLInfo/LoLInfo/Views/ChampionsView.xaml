@@ -7,16 +7,20 @@
 		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
 		Title="Champions">
 	<ContentPage.Content>
-		<ListView
-			x:Name="ChampionListView"
-			IsPullToRefreshEnabled="true"
-			RefreshCommand="{Binding RefreshCommand}"
-			IsRefreshing="{Binding IsBusy, Mode=OneWay}">
-		    <ListView.ItemTemplate>
-				<DataTemplate>
-					<custom:CustomImageCell Name="{Binding Name}" Title="{Binding Title}" ImageSource="{Binding SquareImageUrl}"/>
-				</DataTemplate>
-		    </ListView.ItemTemplate>
-	  	</ListView>
+		<StackLayout Orientation="Vertical">
+			<SearchBar Placeholder="Search Champions" Text="{Binding SearchText}" BackgroundColor="Black" />
+			<ListView
+				x:Name="ChampionListView"
+				ItemsSource="{Binding Champions}"
+				IsPullToRefreshEnabled="true"
+				RefreshCommand="{Binding RefreshCommand}"
+				IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+			    <ListView.ItemTemplate>
+					<DataTemplate>
+						<custom:CustomImageCell Name="{Binding Name}" Title="{Binding Title}" ImageSource="{Binding SquareImageUrl}"/>
+					</DataTemplate>
+			    </ListView.ItemTemplate>
+		  	</ListView>
+		</StackLayout>
 	</ContentPage.Content>
 </local:ChampionsViewBase>

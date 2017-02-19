@@ -32,10 +32,6 @@ namespace LoLInfo.Views
                 {
                     DisplayAlert("Error", "Failed to load champions", "OK");
                 }
-                else
-                {
-                    ChampionListView.ItemsSource = new ObservableCollection<Champion>(ViewModel.Champions);
-                }
             }
         }
     }

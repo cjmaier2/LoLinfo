@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using LolInfo.Models;
 using LolInfo.Services.ServiceModels;
 
@@ -18,6 +19,7 @@ namespace LolInfo.Services.Extensions
                 {
                     Id = champ.Id,
                     Name = champ.Name,
+                    SearchName = Regex.Replace(champ.Name.ToUpper(), @"[^\w\.@-]", ""), //strip special characters
                     Title = champ.Title,
                     SquareImageUrl = string.Format(ServiceConstants.ChampionSquareImageUrl, champ.Image.Full)
                 });

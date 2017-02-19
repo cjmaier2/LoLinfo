@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using LolInfo.Models;
 using LolInfo.Services.Services;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace LoLInfo.ViewModels
 {
@@ -11,7 +13,35 @@ namespace LoLInfo.ViewModels
     {
         ChampionService ChampService { get; } = new ChampionService();
 
-        public List<Champion> Champions { get; private set; }
+        private string searchText;
+        public string SearchText
+        {
+            get
+            {
+                return searchText;
+            }
+            set
+            {
+                searchText = value;
+                FilterChampions();
+            }
+        }
+
+        private List<Champion> AllChampions;
+
+        private ObservableCollection<Champion> champions;
+        public ObservableCollection<Champion> Champions
+        {
+            get
+            {
+                return champions;
+            }
+            set
+            {
+                champions = value;
+                OnPropertyChanged();
+            }
+        }
 
         public ChampionsViewModel()
         {
@@ -23,7 +53,8 @@ namespace LoLInfo.ViewModels
             try
             {
                 IsBusy = true;
-                Champions = await ChampService.GetChampions();
+                AllChampions = await ChampService.GetChampions();
+                Champions = new ObservableCollection<Champion>(AllChampions);
                 return true;
             }
             catch (Exception ex)
@@ -50,5 +81,16 @@ namespace LoLInfo.ViewModels
             await LoadChampions();
         }
 
+        public void FilterChampions()
+        {
+            if (AllChampions == null || AllChampions.Count == 0)
+            {
+                Champions = new ObservableCollection<Champion>();
+            }
+            else
+            {
+                Champions = new ObservableCollection<Champion>(AllChampions.Where(c => c.SearchName.Contains(searchText.ToUpper())).ToList());
+            }
+        }
    }
 }

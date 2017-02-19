@@ -7,6 +7,8 @@ namespace LolInfo.Models
 
         public string Name { get; set; }
 
+        public string SearchName { get; set; }
+
         public string Title { get; set; }
 
         public string SquareImageUrl { get; set; }
