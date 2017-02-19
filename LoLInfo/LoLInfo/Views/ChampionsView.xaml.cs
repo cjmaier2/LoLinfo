@@ -24,14 +24,18 @@ namespace LoLInfo.Views
         {
             base.OnAppearing();
 
-            var success = await ViewModel.LoadChampions();
-            if (!success)
+            //only get champions on first load (or until PTR)
+            if (ViewModel.Champions == null || ViewModel.Champions.Count == 0)
             {
-                DisplayAlert("Error", "Failed to load champions", "OK");
-            }
-            else
-            {
-                ChampionListView.ItemsSource = new ObservableCollection<Champion>(ViewModel.Champions);
+                var success = await ViewModel.LoadChampions();
+                if (!success)
+                {
+                    DisplayAlert("Error", "Failed to load champions", "OK");
+                }
+                else
+                {
+                    ChampionListView.ItemsSource = new ObservableCollection<Champion>(ViewModel.Champions);
+                }
             }
         }
     }

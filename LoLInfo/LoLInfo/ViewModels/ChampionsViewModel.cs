@@ -22,12 +22,17 @@ namespace LoLInfo.ViewModels
         {
             try
             {
+                IsBusy = true;
                 Champions = await ChampService.GetChampions();
                 return true;
             }
             catch (Exception ex)
             {
                 return false;
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
 
@@ -43,7 +48,6 @@ namespace LoLInfo.ViewModels
         async void ExecuteRefreshCommand(object obj)
         {
             await LoadChampions();
-            IsBusy = false;
         }
 
    }
