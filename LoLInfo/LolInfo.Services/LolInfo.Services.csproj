@@ -35,13 +35,18 @@
     <Compile Include="ServiceModels\GetChampions\ChampionListDto.cs" />
     <Compile Include="ServiceModels\GetChampions\ChampionDto.cs" />
     <Compile Include="Extensions\ChampionExtensions.cs" />
-    <Compile Include="ServiceModels\GetChampions\ImageDto.cs" />
+    <Compile Include="ServiceModels\ImageDto.cs" />
+    <Compile Include="ServiceModels\GetItems\ItemListDto.cs" />
+    <Compile Include="ServiceModels\GetItems\ItemDto.cs" />
+    <Compile Include="ServiceModels\GetItems\GoldDto.cs" />
+    <Compile Include="Extensions\ItemExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="ServiceModels\" />
     <Folder Include="ServiceModels\GetChampions\" />
     <Folder Include="Extensions\" />
+    <Folder Include="ServiceModels\GetItems\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
