@@ -22,7 +22,7 @@
 			LoadingPlaceholder="ic_update.png"
 			ErrorPlaceholder="ic_error_outline.png">
 			</ffimageloading:CachedImage>
-		<Label Grid.Row="0" Grid.Column="1" FontSize="16" Text="{Binding Name}" HorizontalOptions="Start" VerticalTextAlignment="End" />
-		<Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="{Binding Title}" HorizontalOptions="Start" VerticalTextAlignment="Start" TextColor="Gray" />
+		<Label Grid.Row="0" Grid.Column="1" FontSize="16" Text="{Binding PrimaryText}" HorizontalOptions="Start" VerticalTextAlignment="End" />
+		<Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="{Binding SecondaryText}" HorizontalOptions="Start" VerticalTextAlignment="Start" TextColor="Gray" />
 	</Grid>
 </ViewCell>

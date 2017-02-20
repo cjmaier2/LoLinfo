@@ -17,7 +17,7 @@
 				IsRefreshing="{Binding IsBusy, Mode=OneWay}">
 			    <ListView.ItemTemplate>
 					<DataTemplate>
-						<custom:CustomImageCell Name="{Binding Name}" Title="{Binding Title}" ImageSource="{Binding SquareImageUrl}"/>
+						<custom:CustomImageCell/>
 					</DataTemplate>
 			    </ListView.ItemTemplate>
 		  	</ListView>

@@ -1,7 +1,7 @@
 ﻿using System;
 namespace LolInfo.Models
 {
-    public class Champion
+    public class Champion : ICustomImageCellModel
     {
         public int Id { get; set; }
 
@@ -11,6 +11,12 @@ namespace LolInfo.Models
 
         public string Title { get; set; }
 
+        #region CustomImageCell Properties
         public string SquareImageUrl { get; set; }
+
+        public string PrimaryText { get { return Name; } }
+
+        public string SecondaryText { get { return Title; } }
+        #endregion
     }
 }
