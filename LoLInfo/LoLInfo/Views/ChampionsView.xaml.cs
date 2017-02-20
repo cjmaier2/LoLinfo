@@ -24,6 +24,11 @@ namespace LoLInfo.Views
         {
             base.OnAppearing();
 
+            if (Device.OS == TargetPlatform.iOS)
+            {
+                ChampionSearchBar.BackgroundColor = Color.Black;
+            }
+
             //only get champions on first load (or until PTR)
             if (ViewModel.Champions == null || ViewModel.Champions.Count == 0)
             {

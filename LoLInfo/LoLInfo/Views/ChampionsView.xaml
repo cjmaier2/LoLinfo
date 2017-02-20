@@ -8,7 +8,7 @@
 		Title="Champions">
 	<ContentPage.Content>
 		<StackLayout Orientation="Vertical">
-			<SearchBar Placeholder="Search Champions" Text="{Binding SearchText}" BackgroundColor="Black" />
+			<SearchBar x:Name="ChampionSearchBar" Placeholder="Search Champions" Text="{Binding SearchText}" />
 			<ListView
 				x:Name="ChampionListView"
 				ItemsSource="{Binding Champions}"
