@@ -17,6 +17,7 @@ namespace LoLInfo.Views
             InitializeComponent();
 
             ChampionListView.ItemTapped += OnItemTapped;
+            ChampionListView.ItemAppearing += OnScroll; //way to detet when ListView is scrolling
             ChampionListView.IsPullToRefreshEnabled = true;
         }
 
@@ -38,6 +39,17 @@ namespace LoLInfo.Views
                     DisplayAlert("Error", "Failed to load champions", "OK");
                 }
             }
+        }
+
+        public void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            base.OnItemTapped(sender, e);
+            ChampionSearchBar.Unfocus();
+        }
+
+        void OnScroll(object sender, ItemVisibilityEventArgs e)
+        {
+            ChampionSearchBar.Unfocus();
         }
     }
 }
