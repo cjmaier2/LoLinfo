@@ -5,15 +5,13 @@ using Xamarin.Forms;
 
 namespace LoLInfo.Views
 {
-    public partial class ChampionSkinsView : ContentPage
+    public partial class ChampionSkinsView : CarouselPage
     {
-        public List<Skin> Skins { get; set; }
-
         public ChampionSkinsView(List<Skin> skins)
         {
             InitializeComponent();
 
-            Skins = skins;
+            ItemsSource = skins;
         }
     }
 }

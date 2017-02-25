@@ -22,13 +22,13 @@ namespace LolInfo.Services.Extensions
                     SearchName = Regex.Replace(champ.Name.ToUpper(), @"[^\w\.@-]", ""), //strip special characters
                     Title = champ.Title,
                     SquareImageUrl = string.Format(ServiceConstants.ChampionSquareImageUrl, champ.Image.Full),
-                    Skins = GetSkins(champ.Name, champ.Skins)
+                    Skins = GetSkins(champ.Key, champ.Skins)
                 });
             }
             return champions.OrderBy(c => c.Name).ToList();
         }
 
-        public static List<Skin> GetSkins(string champName, List<SkinDto> skinDtos)
+        public static List<Skin> GetSkins(string champKey, List<SkinDto> skinDtos)
         {
             var skins = new List<Skin>();
             foreach (var skinDto in skinDtos)
@@ -36,8 +36,8 @@ namespace LolInfo.Services.Extensions
                 skins.Add(new Skin
                 {
                     Name = skinDto.Name,
-                    LoadingImageUrl = $"http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{champName}_{skinDto.Num}.jpg",
-                    SplashImageUrl = $"http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{champName}_{skinDto.Num}.jpg"
+                    LoadingImageUrl = $"http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{champKey}_{skinDto.Num}.jpg",
+                    SplashImageUrl = $"http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{champKey}_{skinDto.Num}.jpg"
                 });
             }
             return skins;

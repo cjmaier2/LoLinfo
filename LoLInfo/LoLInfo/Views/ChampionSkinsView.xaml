@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LoLInfo.Views.ChampionSkinsView">
-	<ContentPage.Content>
-	</ContentPage.Content>
-</ContentPage>
+<CarouselPage 
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="LoLInfo.Views.ChampionSkinsView"
+	BackgroundColor="Black">
+	<CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage BackgroundColor="Black">
+                <StackLayout>
+                	<Image VerticalOptions="FillAndExpand" Source="{Binding LoadingImageUrl}" Aspect="AspectFit" />
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>
