@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace LolInfo.Models
 {
     public class Champion : ICustomImageCellModel
@@ -10,6 +12,8 @@ namespace LolInfo.Models
         public string SearchName { get; set; }
 
         public string Title { get; set; }
+
+        public List<Skin> Skins { get; set; }
 
         #region CustomImageCell Properties
         public string SquareImageUrl { get; set; }

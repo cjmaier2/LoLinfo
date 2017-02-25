@@ -7,7 +7,7 @@ using LolInfo.Services.ServiceModels;
 
 namespace LolInfo.Services.Extensions
 {
-    public static class ItemExtensions
+    public static class ItemMappingExtensions
     {
         public static List<Item> ToItems(this ItemListDto itemListDto)
         {

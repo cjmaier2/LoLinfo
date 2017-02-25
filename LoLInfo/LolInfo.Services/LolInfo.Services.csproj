@@ -34,13 +34,14 @@
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="ServiceModels\GetChampions\ChampionListDto.cs" />
     <Compile Include="ServiceModels\GetChampions\ChampionDto.cs" />
-    <Compile Include="Extensions\ChampionExtensions.cs" />
+    <Compile Include="Extensions\ChampionMappingExtensions.cs" />
     <Compile Include="ServiceModels\ImageDto.cs" />
     <Compile Include="ServiceModels\GetItems\ItemListDto.cs" />
     <Compile Include="ServiceModels\GetItems\ItemDto.cs" />
     <Compile Include="ServiceModels\GetItems\GoldDto.cs" />
-    <Compile Include="Extensions\ItemExtensions.cs" />
+    <Compile Include="Extensions\ItemMappingExtensions.cs" />
     <Compile Include="Services\ItemService.cs" />
+    <Compile Include="ServiceModels\GetChampions\SkinDto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />

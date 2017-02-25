@@ -43,6 +43,8 @@ namespace LoLInfo.Views
         public void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             base.OnItemTapped(sender, e);
+            var skinsView = new ChampionSkinsView(((Champion)e.Item).Skins);
+            Navigation.PushAsync(skinsView);
             ChampionSearchBar.Unfocus();
         }
     }

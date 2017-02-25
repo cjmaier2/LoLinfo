@@ -29,7 +29,7 @@ namespace LolInfo.Services.ServiceModels
 
         //public List<RecommendedDto> Recommended { get; set; }
 
-        //public List<SkinDto> Skins { get; set; }
+        public List<SkinDto> Skins { get; set; }
 
         //public List<ChampionSpellDto> Spells { get; set; }
 

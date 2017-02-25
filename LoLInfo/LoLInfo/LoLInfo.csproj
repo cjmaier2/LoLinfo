@@ -38,6 +38,9 @@
     <EmbeddedResource Include="Custom\CustomImageCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ChampionSkinsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -57,6 +60,9 @@
     <Compile Include="Custom\RecycleListView.cs" />
     <Compile Include="Custom\CustomImageCell.xaml.cs">
       <DependentUpon>CustomImageCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChampionSkinsView.xaml.cs">
+      <DependentUpon>ChampionSkinsView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

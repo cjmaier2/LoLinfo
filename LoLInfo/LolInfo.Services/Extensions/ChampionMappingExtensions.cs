@@ -7,7 +7,7 @@ using LolInfo.Services.ServiceModels;
 
 namespace LolInfo.Services.Extensions
 {
-    public static class ChampionExtensions
+    public static class ChampionMappingExtensions
     {
         public static List<Champion> ToChampions(this ChampionListDto champListDto)
         {
@@ -21,10 +21,26 @@ namespace LolInfo.Services.Extensions
                     Name = champ.Name,
                     SearchName = Regex.Replace(champ.Name.ToUpper(), @"[^\w\.@-]", ""), //strip special characters
                     Title = champ.Title,
-                    SquareImageUrl = string.Format(ServiceConstants.ChampionSquareImageUrl, champ.Image.Full)
+                    SquareImageUrl = string.Format(ServiceConstants.ChampionSquareImageUrl, champ.Image.Full),
+                    Skins = GetSkins(champ.Name, champ.Skins)
                 });
             }
             return champions.OrderBy(c => c.Name).ToList();
+        }
+
+        public static List<Skin> GetSkins(string champName, List<SkinDto> skinDtos)
+        {
+            var skins = new List<Skin>();
+            foreach (var skinDto in skinDtos)
+            {
+                skins.Add(new Skin
+                {
+                    Name = skinDto.Name,
+                    LoadingImageUrl = $"http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{champName}_{skinDto.Num}.jpg",
+                    SplashImageUrl = $"http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{champName}_{skinDto.Num}.jpg"
+                });
+            }
+            return skins;
         }
     }
 }

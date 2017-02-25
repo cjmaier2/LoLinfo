@@ -2,7 +2,7 @@
 using LoLInfo.ViewModels;
 using Xamarin.Forms;
 
-namespace LoLInfo
+namespace LoLInfo.Views
 {
     public class BaseView<T> : ContentPage where T : BaseViewModel, new()
     {

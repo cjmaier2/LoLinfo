@@ -32,6 +32,7 @@
     <Compile Include="Models\Champion.cs" />
     <Compile Include="Abstract\ICustomImageCellModel.cs" />
     <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Skin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
