@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using LolInfo.Models;
 using LolInfo.Services;
@@ -97,7 +98,8 @@ namespace LoLInfo.ViewModels
                 }
                 else
                 {
-                    Items = new ObservableCollection<Item>(AllItems.Where(c => c.SearchName.Contains(searchText.ToUpper())).ToList());
+                    var textToSearch = Regex.Replace(searchText.ToUpper(), @"[^\w\.@-]", ""); //strip special characters
+                    Items = new ObservableCollection<Item>(AllItems.Where(c => c.SearchName.Contains(textToSearch)).ToList());
                 }
             }
         }

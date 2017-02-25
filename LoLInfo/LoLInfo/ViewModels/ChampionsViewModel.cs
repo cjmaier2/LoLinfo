@@ -6,6 +6,7 @@ using LolInfo.Models;
 using LolInfo.Services.Services;
 using Xamarin.Forms;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace LoLInfo.ViewModels
 {
@@ -97,7 +98,8 @@ namespace LoLInfo.ViewModels
                 }
                 else
                 {
-                    Champions = new ObservableCollection<Champion>(AllChampions.Where(c => c.SearchName.Contains(searchText.ToUpper())).ToList());
+                    var textToSearch = Regex.Replace(searchText.ToUpper(), @"[^\w\.@-]", ""); //strip special characters
+                    Champions = new ObservableCollection<Champion>(AllChampions.Where(c => c.SearchName.Contains(textToSearch)).ToList());
                 }
             }
         }
