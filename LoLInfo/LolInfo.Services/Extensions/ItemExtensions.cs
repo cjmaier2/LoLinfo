@@ -15,6 +15,9 @@ namespace LolInfo.Services.Extensions
             foreach (KeyValuePair<string, ItemDto> entry in itemListDto.Data)
             {
                 var item = entry.Value;
+                if (string.IsNullOrWhiteSpace(item.Name) || item.Gold.Total == 0)
+                    continue;
+                
                 items.Add(new Item()
                 {
                     Id = item.Id,

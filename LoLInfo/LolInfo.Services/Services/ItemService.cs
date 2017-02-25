@@ -8,24 +8,24 @@ using LolInfo.Services.ServiceModels;
 using LolInfo.Services.Services;
 using Newtonsoft.Json;
 
-namespace LolInfo.Services.Services
+namespace LolInfo.Services
 {
-    public class ChampionService : BaseService
+    public class ItemService : BaseService
     {
-        public async Task<List<Champion>> GetChampions()
+        public async Task<List<Item>> GetItems()
         {
             using (var client = new HttpClient())
             {
-                var coreUrl = string.Format(ServiceConstants.GetChampionsUrl, ServiceConstants.CurrentRegionCode);
-                var queries = new List<string>() { "champData=all" };
+                var coreUrl = string.Format(ServiceConstants.GetItemsUrl, ServiceConstants.CurrentRegionCode);
+                var queries = new List<string>() { "itemListData=all" };
                 var url = GetRequestUrl(coreUrl, queries);
                 var json = await client.GetStringAsync(url);
 
                 if (string.IsNullOrWhiteSpace(json))
                     return null;
 
-                var champsDto = JsonConvert.DeserializeObject<ChampionListDto>(json);
-                return champsDto.ToChampions();
+                var itemsDto = JsonConvert.DeserializeObject<ItemListDto>(json);
+                return itemsDto.ToItems();
             }
         }
     }

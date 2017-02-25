@@ -26,6 +26,7 @@ namespace LolInfo.Services
         //Service Call URLs
         public const string BaseApiUrl = "https://global.api.pvp.net";
         public const string GetChampionsUrl = "/api/lol/static-data/{0}/v1.2/champion"; //input: region
+        public const string GetItemsUrl = "/api/lol/static-data/{0}/v1.2/item"; //input: region
 
         //Image URLs
         public const string ItemImageUrl = "http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/{0}"; //http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/3146.png

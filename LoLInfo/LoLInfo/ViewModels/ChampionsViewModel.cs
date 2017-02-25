@@ -101,5 +101,5 @@ namespace LoLInfo.ViewModels
                 }
             }
         }
-   }
+    }
 }

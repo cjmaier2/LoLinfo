@@ -1,9 +1,26 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <local:ItemsViewBase xmlns="http://xamarin.com/schemas/2014/forms"
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 		x:Class="LoLInfo.Views.ItemsView"
 		xmlns:local="clr-namespace:LoLInfo.Views"
+		xmlns:custom="clr-namespace:LoLInfo.Custom"
+		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
 		Title="Items">
 	<ContentPage.Content>
+		<StackLayout Orientation="Vertical">
+			<SearchBar x:Name="ItemSearchBar" Placeholder="Search Items" Text="{Binding SearchText}" />
+			<ListView
+				x:Name="ItemListView"
+				ItemsSource="{Binding Items}"
+				IsPullToRefreshEnabled="true"
+				RefreshCommand="{Binding RefreshCommand}"
+				IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+			    <ListView.ItemTemplate>
+					<DataTemplate>
+						<custom:CustomImageCell/>
+					</DataTemplate>
+			    </ListView.ItemTemplate>
+		  	</ListView>
+		</StackLayout>
 	</ContentPage.Content>
 </local:ItemsViewBase>
