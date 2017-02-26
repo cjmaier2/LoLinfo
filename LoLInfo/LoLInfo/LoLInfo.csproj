@@ -64,6 +64,7 @@
     <Compile Include="Views\ChampionSkinsView.xaml.cs">
       <DependentUpon>ChampionSkinsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Custom\CustomSearchBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

@@ -8,7 +8,7 @@
 		Title="Items">
 	<ContentPage.Content>
 		<StackLayout Orientation="Vertical">
-			<SearchBar x:Name="ItemSearchBar" Placeholder="Search Items" Text="{Binding SearchText}" />
+			<custom:CustomSearchBar x:Name="ItemSearchBar" Placeholder="Search Items" Text="{Binding SearchText}" />
 			<ListView
 				x:Name="ItemListView"
 				ItemsSource="{Binding Items}"

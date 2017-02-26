@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <local:ChampionsViewBase xmlns="http://xamarin.com/schemas/2014/forms"
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 		x:Class="LoLInfo.Views.ChampionsView"
@@ -8,7 +8,7 @@
 		Title="Champions">
 	<ContentPage.Content>
 		<StackLayout Orientation="Vertical">
-			<SearchBar x:Name="ChampionSearchBar" Placeholder="Search Champions" Text="{Binding SearchText}" />
+			<custom:CustomSearchBar x:Name="ChampionSearchBar" Placeholder="Search Champions" Text="{Binding SearchText}" />
 			<ListView
 				x:Name="ChampionListView"
 				ItemsSource="{Binding Champions}"

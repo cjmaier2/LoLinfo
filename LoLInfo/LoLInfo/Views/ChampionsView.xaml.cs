@@ -45,7 +45,6 @@ namespace LoLInfo.Views
             base.OnItemTapped(sender, e);
             var skinsView = new ChampionSkinsView(((Champion)e.Item).Skins);
             Navigation.PushAsync(skinsView);
-            ChampionSearchBar.Unfocus();
         }
     }
 }
