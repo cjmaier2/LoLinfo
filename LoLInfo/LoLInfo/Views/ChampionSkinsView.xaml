@@ -7,9 +7,10 @@
 	<CarouselPage.ItemTemplate>
         <DataTemplate>
             <ContentPage BackgroundColor="Black">
-                <StackLayout>
-                	<Image VerticalOptions="FillAndExpand" Source="{Binding LoadingImageUrl}" Aspect="AspectFit" />
-                </StackLayout>
+                <AbsoluteLayout>
+                	<Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional" VerticalOptions="FillAndExpand" Source="{Binding LoadingImageUrl}" Aspect="AspectFit" />
+					<Label AbsoluteLayout.LayoutBounds=".5, .9, 1, 30" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Text="{Binding Name}" HorizontalTextAlignment="Center" TextColor="Aqua"/>
+                </AbsoluteLayout>
             </ContentPage>
         </DataTemplate>
     </CarouselPage.ItemTemplate>
