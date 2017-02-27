@@ -65,6 +65,7 @@
       <DependentUpon>ChampionSkinsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom\CustomSearchBar.cs" />
+    <Compile Include="Custom\OpacityLabel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />

@@ -2,14 +2,16 @@
 <CarouselPage 
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:custom="clr-namespace:LoLInfo.Custom"
 	x:Class="LoLInfo.Views.ChampionSkinsView"
 	BackgroundColor="Black">
 	<CarouselPage.ItemTemplate>
         <DataTemplate>
             <ContentPage BackgroundColor="Black">
                 <AbsoluteLayout>
-                	<Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional" VerticalOptions="FillAndExpand" Source="{Binding LoadingImageUrl}" Aspect="AspectFit" />
-					<Label AbsoluteLayout.LayoutBounds=".5, .9, 1, 30" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Text="{Binding Name}" HorizontalTextAlignment="Center" TextColor="Aqua"/>
+                	<Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional" Source="{Binding LoadingImageUrl}" Aspect="AspectFit" />
+					<custom:OpacityLabel AbsoluteLayout.LayoutBounds=".5, .9, 1, 30" AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" Text="{Binding Name}"
+						HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"/>
                 </AbsoluteLayout>
             </ContentPage>
         </DataTemplate>
