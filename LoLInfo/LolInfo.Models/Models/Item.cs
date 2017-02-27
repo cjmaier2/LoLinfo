@@ -16,7 +16,7 @@ namespace LolInfo.Models
 
         public string PrimaryText { get { return Name; } }
 
-        public string SecondaryText { get { return Gold.ToString(); } }
+        public string SecondaryText { get { return Gold.ToString() + " G"; } }
         #endregion
     }
 }
