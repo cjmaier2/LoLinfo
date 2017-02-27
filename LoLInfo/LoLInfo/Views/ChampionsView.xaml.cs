@@ -44,6 +44,7 @@ namespace LoLInfo.Views
         {
             base.OnItemTapped(sender, e);
             var skinsView = new ChampionSkinsView(((Champion)e.Item).Skins);
+			skinsView.Title = ((Champion)e.Item).Name;
             Navigation.PushAsync(skinsView);
         }
     }
