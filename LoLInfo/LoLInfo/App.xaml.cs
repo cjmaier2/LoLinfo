@@ -17,6 +17,7 @@ namespace LoLInfo
                 BarBackgroundColor = Color.Black,
                 BarTextColor = Color.White
             };
+
             if (Device.OS == TargetPlatform.iOS)
                 championTab.Icon = new FileImageSource { File = "ic_face.png" };
 
@@ -37,6 +38,9 @@ namespace LoLInfo
                     itemTab
                 }
             };
+
+            if (Device.OS == TargetPlatform.Windows || Device.OS == TargetPlatform.WinPhone)
+                tabs.BarTextColor = Color.White;
 
             MainPage = tabs;
         }
