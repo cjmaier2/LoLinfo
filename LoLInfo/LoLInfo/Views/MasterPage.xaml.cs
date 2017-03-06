@@ -17,7 +17,7 @@ namespace LoLInfo.Views
             masterPageItems.Add(new MasterPageItem
             {
                 Title = "About",
-                IconSource = "ic_face.png",
+                IconSource = "ic_info_outline.png",
                 TargetType = typeof(AboutView)
             });
 
