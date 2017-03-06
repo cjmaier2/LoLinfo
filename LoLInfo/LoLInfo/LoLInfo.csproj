@@ -40,6 +40,15 @@
     <EmbeddedResource Include="Views\ChampionSkinsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AboutView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MasterDetailContainer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -82,6 +91,16 @@
     </Compile>
     <Compile Include="Custom\CustomSearchBar.cs" />
     <Compile Include="Custom\OpacityLabel.cs" />
+    <Compile Include="Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MasterPage.xaml.cs">
+      <DependentUpon>MasterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MasterDetailContainer.xaml.cs">
+      <DependentUpon>MasterDetailContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RootTabPage.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
