@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LoLInfo.AboutView">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LoLInfo.AboutView" Title="About">
 	<ContentPage.Content>
 		<ScrollView  Orientation = "Vertical" VerticalOptions="StartAndExpand">
-            <StackLayout  VerticalOptions="StartAndExpand">
+            <StackLayout  VerticalOptions="StartAndExpand" Padding="20">
 				<Label Text="LoLinfo isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc."/>
 			</StackLayout>
 		</ScrollView>
