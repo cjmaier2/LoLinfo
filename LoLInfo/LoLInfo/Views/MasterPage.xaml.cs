@@ -16,8 +16,8 @@ namespace LoLInfo.Views
             var masterPageItems = new List<MasterPageItem>();
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "Main",
-                IconSource = "ic_info_outline.png",
+                Title = "Home",
+                IconSource = "ic_home.png",
                 TargetType = typeof(RootTabPage)
             });
             masterPageItems.Add(new MasterPageItem
