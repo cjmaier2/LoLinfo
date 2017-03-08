@@ -5,6 +5,7 @@ namespace LoLInfo.ViewModels
     {
         public SettingsViewModel()
         {
+
         }
     }
 }

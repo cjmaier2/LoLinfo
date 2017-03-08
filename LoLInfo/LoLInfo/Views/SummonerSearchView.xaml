@@ -13,7 +13,7 @@
 					Property=Height,Factor=.1, Constant=0}"
 				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
 					Property=Width,Factor=.8,Constant=0}"/>
-			<Button Text="Search"
+			<Button Text="Search" Clicked="OnSearchClicked"
 		        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
 		            ElementName=searchInput,Property=X,Factor=1,Constant=0}"
 				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
