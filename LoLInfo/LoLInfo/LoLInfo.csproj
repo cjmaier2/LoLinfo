@@ -52,6 +52,9 @@
     <EmbeddedResource Include="Views\SettingsView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\SummonerSearchView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -109,6 +112,10 @@
     </Compile>
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="Services\MyYourApiKey.cs" />
+    <Compile Include="ViewModels\SummonerSearchViewModel.cs" />
+    <Compile Include="Views\SummonerSearchView.xaml.cs">
+      <DependentUpon>SummonerSearchView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

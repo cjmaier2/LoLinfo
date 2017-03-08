@@ -14,7 +14,6 @@ namespace LoLInfo.Views
                 BarBackgroundColor = Color.Black,
                 BarTextColor = Color.White
             };
-
             if (Device.OS == TargetPlatform.iOS)
                 championTab.Icon = new FileImageSource { File = "ic_face.png" };
 
@@ -27,8 +26,18 @@ namespace LoLInfo.Views
             if (Device.OS == TargetPlatform.iOS)
                 itemTab.Icon = new FileImageSource { File = "ic_monetization_on.png" };
 
+            var summonerTab = new NavigationPage(new SummonerSearchView())
+            {
+                Title = "Summoners",
+                BarBackgroundColor = Color.Black,
+                BarTextColor = Color.White
+            };
+            if (Device.OS == TargetPlatform.iOS)
+                summonerTab.Icon = new FileImageSource { File = "ic_account_circle.png" };
+
             this.Children.Add(championTab);
             this.Children.Add(itemTab);
+            this.Children.Add(summonerTab);
 
             if (Device.OS == TargetPlatform.Windows || Device.OS == TargetPlatform.WinPhone)
                 BarTextColor = Color.White;
