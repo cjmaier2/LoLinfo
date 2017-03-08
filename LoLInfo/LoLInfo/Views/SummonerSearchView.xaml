@@ -5,5 +5,21 @@
 	xmlns:local="clr-namespace:LoLInfo.Views"
 	Title="Summoner Search">
 	<ContentPage.Content>
+		<RelativeLayout>
+			<Entry x:Name="searchInput" Placeholder="Summoner Name"
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+					Property=Width,Factor=.1, Constant=0}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+					Property=Height,Factor=.1, Constant=0}"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+					Property=Width,Factor=.8,Constant=0}"/>
+			<Button Text="Search"
+		        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+		            ElementName=searchInput,Property=X,Factor=1,Constant=0}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+		            ElementName=searchInput,Property=Y,Factor=1,Constant=40}"
+		        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=searchInput,Property=Width,Factor=1,Constant=0}"/>
+		</RelativeLayout>
 	</ContentPage.Content>
 </local:SummonerSearchViewBase>
