@@ -27,5 +27,22 @@ namespace LoLInfo.Services.WebServices
                 return summonerDictionary[summonerName.ToLower()].Id;
             }
         }
+
+        public async Task<GameDto[]> GetMatchHistory(string summonerName)
+        {
+            var summonerId = await GetSummonerId(summonerName);
+            using (var client = new HttpClient())
+            {
+                var coreUrl = string.Format(ServiceConstants.GetMatchHistoryUrl, ServiceConstants.CurrentRegionCode, summonerId);
+                var url = GetRequestUrl(coreUrl, null);
+                var json = await client.GetStringAsync(url);
+
+                if (string.IsNullOrWhiteSpace(json))
+                    return null;
+
+                var recentGames = JsonConvert.DeserializeObject<RecentGamesDto>(json);
+                return recentGames.Games;
+            }
+        }
     }
 }

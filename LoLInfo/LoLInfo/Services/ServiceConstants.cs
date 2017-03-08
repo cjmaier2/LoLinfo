@@ -30,6 +30,7 @@ namespace LoLInfo.Services
         public const string GetChampionsUrl = "/api/lol/static-data/{0}/v1.2/champion"; //input: region
         public const string GetItemsUrl = "/api/lol/static-data/{0}/v1.2/item"; //input: region
         public const string GetSummonerIdUrl = "/api/lol/{0}/v1.4/summoner/by-name/{1}"; //inputs: region, comma-separated summoner name(s)
+        public const string GetMatchHistoryUrl = "/api/lol/{0}/v1.3/game/by-summoner/{1}/recent"; //inputs: region, summoner id
 
         //Image URLs
         public const string ItemImageUrl = "http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/{0}"; //http://ddragon.leagueoflegends.com/cdn/7.3.1/img/item/3146.png

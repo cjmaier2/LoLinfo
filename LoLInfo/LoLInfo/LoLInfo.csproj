@@ -118,6 +118,9 @@
     </Compile>
     <Compile Include="Services\WebServices\SummonerService.cs" />
     <Compile Include="Services\ServiceModels\GetMatchHistory\SummonerDto.cs" />
+    <Compile Include="Services\ServiceModels\GetMatchHistory\RecentGamesDto.cs" />
+    <Compile Include="Services\ServiceModels\GetMatchHistory\GameDto.cs" />
+    <Compile Include="Services\ServiceModels\GetMatchHistory\RawStatsDto.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

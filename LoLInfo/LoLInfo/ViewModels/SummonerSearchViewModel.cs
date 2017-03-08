@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using LoLInfo.Services.ServiceModels;
 using LoLInfo.Services.WebServices;
 
 namespace LoLInfo.ViewModels
@@ -13,17 +14,17 @@ namespace LoLInfo.ViewModels
             
         }
 
-        public async Task<long> GetMatchHistory(string searchText)
+        public async Task<GameDto[]> GetMatchHistory(string summonerName)
         {
             try
             {
                 IsBusy = true;
-                var matchHistory = await SummonerService.GetSummonerId(searchText);
+                var matchHistory = await SummonerService.GetMatchHistory(summonerName);
                 return matchHistory;
             }
             catch (Exception ex)
             {
-                return -1;
+                return null;
             }
             finally
             {
