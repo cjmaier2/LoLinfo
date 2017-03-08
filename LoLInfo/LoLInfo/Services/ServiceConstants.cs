@@ -1,4 +1,6 @@
 ﻿using System;
+using LoLInfo.Services;
+
 namespace LolInfo.Services
 {
     public class ServiceConstants
@@ -6,7 +8,7 @@ namespace LolInfo.Services
         //Full Riot Games API Reference: https://developer.riotgames.com/api/methods
         //Static Data API Documentation: https://developer.riotgames.com/docs/static-data
 
-        public const string MyAPIKey = "Insert_API_Key_Here";
+        public static string MyAPIKey = YourApiKey.Value;
 
         //Region Constants
         public const string CurrentRegionCode = NorthAmerica;

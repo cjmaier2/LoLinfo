@@ -108,6 +108,7 @@
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="Services\MyYourApiKey.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
