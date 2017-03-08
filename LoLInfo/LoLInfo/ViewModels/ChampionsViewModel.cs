@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using LolInfo.Models;
-using LolInfo.Services.Services;
+using LoLInfo.Models;
+using LoLInfo.Services.Services;
 using Xamarin.Forms;
 using System.Linq;
 using System.Text.RegularExpressions;

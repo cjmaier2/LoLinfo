@@ -1,5 +1,5 @@
 ﻿using System;
-namespace LolInfo.Models
+namespace LoLInfo.Models
 {
     //properties bound to in CustomImageCell
     public interface ICustomImageCellModel

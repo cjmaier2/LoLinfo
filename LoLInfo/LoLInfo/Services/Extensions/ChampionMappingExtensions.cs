@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using LolInfo.Models;
-using LolInfo.Services.ServiceModels;
+using LoLInfo.Models;
+using LoLInfo.Services.ServiceModels;
 
-namespace LolInfo.Services.Extensions
+namespace LoLInfo.Services.Extensions
 {
     public static class ChampionMappingExtensions
     {

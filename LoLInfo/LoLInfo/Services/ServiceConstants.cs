@@ -1,7 +1,7 @@
 ﻿using System;
 using LoLInfo.Services;
 
-namespace LolInfo.Services
+namespace LoLInfo.Services
 {
     public class ServiceConstants
     {

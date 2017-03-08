@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LolInfo.Models
+namespace LoLInfo.Models
 {
     public class Champion : ICustomImageCellModel
     {

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
@@ -14,7 +14,7 @@
   <mp:PhoneIdentity PhoneProductId="0841cf7f-e78c-4753-a193-ff368b2091e4" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>LolInfo.UWP</DisplayName>
+    <DisplayName>LoLInfo.UWP</DisplayName>
     <PublisherDisplayName>cmaier</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="LolInfo.UWP.App">
+      EntryPoint="LoLInfo.UWP.App">
       <uap:VisualElements
-        DisplayName="LolInfo.UWP"
+        DisplayName="LoLInfo.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="LolInfo.UWP"
+        Description="LoLInfo.UWP"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

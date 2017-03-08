@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace LolInfo.Services.ServiceModels
+namespace LoLInfo.Services.ServiceModels
 {
     public class ChampionListDto
     {

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using LolInfo.Models;
-using LolInfo.Services.Extensions;
-using LolInfo.Services.ServiceModels;
-using LolInfo.Services.Services;
+using LoLInfo.Models;
+using LoLInfo.Services.Extensions;
+using LoLInfo.Services.ServiceModels;
+using LoLInfo.Services.Services;
 using Newtonsoft.Json;
 
-namespace LolInfo.Services.Services
+namespace LoLInfo.Services.Services
 {
     public class ChampionService : BaseService
     {

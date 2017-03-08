@@ -4,7 +4,7 @@ using LoLInfo.ViewModels;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.Collections.ObjectModel;
-using LolInfo.Models;
+using LoLInfo.Models;
 
 namespace LoLInfo.Views
 {

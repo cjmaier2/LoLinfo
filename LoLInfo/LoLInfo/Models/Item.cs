@@ -1,5 +1,5 @@
 ﻿using System;
-namespace LolInfo.Models
+namespace LoLInfo.Models
 {
     public class Item : ICustomImageCellModel
     {

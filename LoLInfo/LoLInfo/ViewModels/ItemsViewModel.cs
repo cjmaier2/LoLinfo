@@ -4,8 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using LolInfo.Models;
-using LolInfo.Services;
+using LoLInfo.Models;
+using LoLInfo.Services;
 using Xamarin.Forms;
 
 namespace LoLInfo.ViewModels

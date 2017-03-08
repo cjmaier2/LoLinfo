@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using LolInfo.Models;
+using LoLInfo.Models;
 using Xamarin.Forms;
 
 namespace LoLInfo.Views
