@@ -10,7 +10,10 @@ namespace LoLInfo
         {
             InitializeComponent();
 
-            MainPage = new MasterDetailContainer();
+            if (Device.OS == TargetPlatform.Android || Device.OS == TargetPlatform.iOS)
+                MainPage = new MasterDetailContainer();
+            else
+                MainPage = new RootTabPage();
         }
 
         protected override void OnStart()
