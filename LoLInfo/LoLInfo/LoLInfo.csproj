@@ -111,7 +111,7 @@
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\SettingsViewModel.cs" />
-    <Compile Include="Services\MyYourApiKey.cs" />
+    <Compile Include="Services\YourApiKey.cs" />
     <Compile Include="ViewModels\SummonerSearchViewModel.cs" />
     <Compile Include="Views\SummonerSearchView.xaml.cs">
       <DependentUpon>SummonerSearchView.xaml</DependentUpon>
