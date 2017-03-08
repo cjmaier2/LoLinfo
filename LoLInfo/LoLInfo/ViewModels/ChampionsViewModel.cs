@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using LoLInfo.Models;
-using LoLInfo.Services.Services;
+using LoLInfo.Services.WebServices;
 using Xamarin.Forms;
 using System.Linq;
 using System.Text.RegularExpressions;

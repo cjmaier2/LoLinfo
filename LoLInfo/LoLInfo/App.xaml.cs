@@ -1,4 +1,4 @@
-﻿using LoLInfo.Services.Services;
+﻿using LoLInfo.Services.WebServices;
 using LoLInfo.Views;
 using Xamarin.Forms;
 

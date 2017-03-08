@@ -75,9 +75,9 @@
     <Compile Include="Services\ServiceModels\GetItems\ItemDto.cs" />
     <Compile Include="Services\ServiceModels\GetItems\ItemListDto.cs" />
     <Compile Include="Services\ServiceModels\ImageDto.cs" />
-    <Compile Include="Services\Services\BaseService.cs" />
-    <Compile Include="Services\Services\ChampionService.cs" />
-    <Compile Include="Services\Services\ItemService.cs" />
+    <Compile Include="Services\WebServices\BaseService.cs" />
+    <Compile Include="Services\WebServices\ChampionService.cs" />
+    <Compile Include="Services\WebServices\ItemService.cs" />
     <Compile Include="Views\ChampionsView.xaml.cs">
       <DependentUpon>ChampionsView.xaml</DependentUpon>
     </Compile>

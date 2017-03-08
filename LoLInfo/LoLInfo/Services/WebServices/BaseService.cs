@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LoLInfo.Services.Services
+namespace LoLInfo.Services.WebServices
 {
     public class BaseService
     {
