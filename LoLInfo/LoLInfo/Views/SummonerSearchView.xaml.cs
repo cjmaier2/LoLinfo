@@ -22,11 +22,11 @@ namespace LoLInfo.Views
                 var matchHistory = await ViewModel.GetMatchHistory(searchText);
                 if (matchHistory == null)
                 {
-                    DisplayAlert("Error", "Failed to load champions", "OK");
+                    await DisplayAlert("Error", "Failed to retrieve match history", "OK");
                 }
                 else
                 {
-                    //navigate to match history page
+                    await Navigation.PushAsync(new MatchHistoryView(matchHistory));
                 }
             }
         }

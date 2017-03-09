@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
+using LoLInfo.Models;
 using LoLInfo.Services;
 using LoLInfo.Services.ServiceModels;
 using LoLInfo.Services.WebServices;
@@ -28,7 +29,7 @@ namespace LoLInfo.Services.WebServices
             }
         }
 
-        public async Task<GameDto[]> GetMatchHistory(string summonerName)
+        public async Task<List<MatchInfo>> GetMatchHistory(string summonerName)
         {
             var summonerId = await GetSummonerId(summonerName);
             using (var client = new HttpClient())
@@ -41,7 +42,7 @@ namespace LoLInfo.Services.WebServices
                     return null;
 
                 var recentGames = JsonConvert.DeserializeObject<RecentGamesDto>(json);
-                return recentGames.Games;
+                return recentGames.ToMatchHistory();
             }
         }
     }

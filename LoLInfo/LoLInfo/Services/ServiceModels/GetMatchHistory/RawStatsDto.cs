@@ -17,6 +17,20 @@ namespace LoLInfo.Services.ServiceModels
 
         public int GoldSpent { get; set; }
 
+        public int Item0 { get; set; }
+
+        public int Item1 { get; set; }
+
+        public int Item2 { get; set; }
+
+        public int Item3 { get; set; }
+
+        public int Item4 { get; set; }
+
+        public int Item5 { get; set; }
+
+        public int Item6 { get; set; }
+
         public int KillingSprees { get; set; }
 
         public int LargestKillingSpree { get; set; }

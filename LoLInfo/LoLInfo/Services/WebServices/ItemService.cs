@@ -12,6 +12,9 @@ namespace LoLInfo.Services
 {
     public class ItemService : BaseService
     {
+        //dictionary to get champion image in match history
+        public static Dictionary<int, string> ItemImageDictionary = new Dictionary<int, string>();
+
         public async Task<List<Item>> GetItems()
         {
             using (var client = new HttpClient())
@@ -25,7 +28,17 @@ namespace LoLInfo.Services
                     return null;
 
                 var itemsDto = JsonConvert.DeserializeObject<ItemListDto>(json);
-                return itemsDto.ToItems();
+                var items = itemsDto.ToItems();
+
+                foreach (var item in items)
+                {
+                    if (!ItemImageDictionary.ContainsKey(item.Id))
+                    {
+                        ItemImageDictionary.Add(item.Id, item.SquareImageUrl);
+                    }
+                }
+
+                return items;
             }
         }
     }

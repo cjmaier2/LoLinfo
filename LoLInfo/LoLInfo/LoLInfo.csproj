@@ -55,6 +55,12 @@
     <EmbeddedResource Include="Views\SummonerSearchView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Custom\MatchHistoryCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MatchHistoryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -121,6 +127,14 @@
     <Compile Include="Services\ServiceModels\GetMatchHistory\RecentGamesDto.cs" />
     <Compile Include="Services\ServiceModels\GetMatchHistory\GameDto.cs" />
     <Compile Include="Services\ServiceModels\GetMatchHistory\RawStatsDto.cs" />
+    <Compile Include="Custom\MatchHistoryCell.xaml.cs">
+      <DependentUpon>MatchHistoryCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MatchInfo.cs" />
+    <Compile Include="Services\Extensions\MatchHistoryExtensions.cs" />
+    <Compile Include="Views\MatchHistoryView.xaml.cs">
+      <DependentUpon>MatchHistoryView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
