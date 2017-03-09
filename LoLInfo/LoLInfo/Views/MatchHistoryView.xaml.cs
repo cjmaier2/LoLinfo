@@ -12,6 +12,12 @@ namespace LoLInfo
             InitializeComponent();
 
             MatchHistoryListView.ItemsSource = matchHistory;
+            MatchHistoryListView.ItemTapped += OnItemTapped;
+        }
+
+        public void OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

@@ -12,6 +12,7 @@
     	<Grid.ColumnDefinitions>
 		    <ColumnDefinition Width="80"></ColumnDefinition>
 		    <ColumnDefinition Width="*"></ColumnDefinition>
+			<ColumnDefinition Width="Auto"></ColumnDefinition>
 	    </Grid.ColumnDefinitions>
 
 		<!--CachedImage API Reference: https://github.com/luberda-molinet/FFImageLoading/wiki/Xamarin.Forms-API-->
@@ -20,10 +21,28 @@
 			DownsampleToViewSize="true"
 			Source = "{Binding ChampionImage}"
 			LoadingPlaceholder="ic_update.png"
-			ErrorPlaceholder="ic_error_outline.png">
-			</ffimageloading:CachedImage>
+			ErrorPlaceholder="ic_error_outline.png"/>
 		<Label Grid.Row="0" Grid.Column="1" FontSize="20" Text="{Binding WinLossText}" HorizontalOptions="Start" VerticalTextAlignment="End" />
 		<Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="{Binding GameMode}" HorizontalOptions="Start" VerticalTextAlignment="Center" TextColor="Gray" />
 		<Label Grid.Row="2" Grid.Column="1" FontSize="16" Text="{Binding KDAText}" HorizontalOptions="Start" VerticalTextAlignment="Start" />
+
+		<Grid Grid.RowSpan="3" Grid.Column="2" Padding="0" RowSpacing="0" ColumnSpacing="0">
+			<Grid.RowDefinitions>
+			    <RowDefinition Height="*"></RowDefinition>
+				<RowDefinition Height="*"></RowDefinition>
+	    	</Grid.RowDefinitions>
+	    	<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="40"></ColumnDefinition>
+				<ColumnDefinition Width="40"></ColumnDefinition>
+				<ColumnDefinition Width="40"></ColumnDefinition>
+		    </Grid.ColumnDefinitions>
+
+			<ffimageloading:CachedImage HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Source="{Binding Item0Image}"/>
+			<ffimageloading:CachedImage HorizontalOptions="Center" Grid.Row="0" Grid.Column="1" Source="{Binding Item1Image}"/>
+			<ffimageloading:CachedImage HorizontalOptions="Center" Grid.Row="0" Grid.Column="2" Source="{Binding Item2Image}"/>
+			<ffimageloading:CachedImage HorizontalOptions="Center" Grid.Row="1" Grid.Column="0" Source="{Binding Item3Image}"/>
+			<ffimageloading:CachedImage HorizontalOptions="Center" Grid.Row="1" Grid.Column="1" Source="{Binding Item4Image}"/>
+			<ffimageloading:CachedImage HorizontalOptions="Center" Grid.Row="1" Grid.Column="2" Source="{Binding Item5Image}"/>
+		</Grid>
 	</Grid>
 </ViewCell>
