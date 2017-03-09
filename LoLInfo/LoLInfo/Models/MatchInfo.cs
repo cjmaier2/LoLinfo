@@ -15,6 +15,14 @@ namespace LoLInfo.Models
 
         public int Assists { get; set; }
 
+        public string KDAText
+        {
+            get
+            {
+                return $"{Kills} | {Deaths} | {Assists}";
+            }
+        }
+
         public string Item0Image { get; set; }
 
         public string Item1Image { get; set; }

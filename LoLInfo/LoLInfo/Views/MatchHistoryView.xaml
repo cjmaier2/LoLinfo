@@ -5,7 +5,7 @@
 	x:Class="LoLInfo.MatchHistoryView"
 	xmlns:custom="clr-namespace:LoLInfo.Custom">
 	<ContentPage.Content>
-		<ListView x:Name="MatchHistoryListView">
+		<ListView x:Name="MatchHistoryListView" RowHeight="80">
 		    <ListView.ItemTemplate>
 				<DataTemplate>
 					<custom:MatchHistoryCell/>

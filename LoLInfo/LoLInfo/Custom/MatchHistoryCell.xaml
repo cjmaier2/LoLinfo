@@ -5,24 +5,25 @@
 		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 	<Grid Padding="0" RowSpacing="0">
   		<Grid.RowDefinitions>
-		    <RowDefinition Height="1.3*"></RowDefinition>
+		    <RowDefinition Height="1.2*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
 			<RowDefinition Height="*"></RowDefinition>
     	</Grid.RowDefinitions>
     	<Grid.ColumnDefinitions>
-		    <ColumnDefinition Width="40"></ColumnDefinition>
+		    <ColumnDefinition Width="80"></ColumnDefinition>
 		    <ColumnDefinition Width="*"></ColumnDefinition>
 	    </Grid.ColumnDefinitions>
 
 		<!--CachedImage API Reference: https://github.com/luberda-molinet/FFImageLoading/wiki/Xamarin.Forms-API-->
-		<ffimageloading:CachedImage Grid.RowSpan="2"
+		<ffimageloading:CachedImage Grid.RowSpan="3"
 			HorizontalOptions="Center" VerticalOptions="Center"
-			WidthRequest="300" HeightRequest="300"
 			DownsampleToViewSize="true"
 			Source = "{Binding ChampionImage}"
 			LoadingPlaceholder="ic_update.png"
 			ErrorPlaceholder="ic_error_outline.png">
 			</ffimageloading:CachedImage>
-		<Label Grid.Row="0" Grid.Column="1" FontSize="16" Text="{Binding WinLossText}" HorizontalOptions="Start" VerticalTextAlignment="End" />
-		<Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="{Binding GameMode}" HorizontalOptions="Start" VerticalTextAlignment="Start" TextColor="Gray" />
+		<Label Grid.Row="0" Grid.Column="1" FontSize="20" Text="{Binding WinLossText}" HorizontalOptions="Start" VerticalTextAlignment="End" />
+		<Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="{Binding GameMode}" HorizontalOptions="Start" VerticalTextAlignment="Center" TextColor="Gray" />
+		<Label Grid.Row="2" Grid.Column="1" FontSize="16" Text="{Binding KDAText}" HorizontalOptions="Start" VerticalTextAlignment="Start" />
 	</Grid>
 </ViewCell>
