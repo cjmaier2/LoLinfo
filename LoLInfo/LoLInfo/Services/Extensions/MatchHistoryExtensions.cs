@@ -17,6 +17,7 @@ namespace LoLInfo
                 matchHistory.Add(new MatchInfo
                 {
                     ChampionImage = ChampionService.ChampionImageDictionary[game.ChampionId],
+                    Win = game.Stats.Win,
                     WinLossText = game.Stats.Win ? "Win" : "Loss",
                     GameMode = game.GameMode,
                     Kills = game.Stats.ChampionsKilled,

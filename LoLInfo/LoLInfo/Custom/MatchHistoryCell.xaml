@@ -2,6 +2,7 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 		x:Class="LoLInfo.Custom.MatchHistoryCell"
+		xmlns:converters="clr-namespace:LoLInfo.Custom.Converters"
 		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms">
 	<Grid Padding="0" RowSpacing="0">
   		<Grid.RowDefinitions>
@@ -22,7 +23,7 @@
 			Source = "{Binding ChampionImage}"
 			LoadingPlaceholder="ic_update.png"
 			ErrorPlaceholder="ic_error_outline.png"/>
-		<Label Grid.Row="0" Grid.Column="1" FontSize="20" Text="{Binding WinLossText}" HorizontalOptions="Start" VerticalTextAlignment="End" />
+		<Label Grid.Row="0" Grid.Column="1" FontSize="20" Text="{Binding WinLossText}" TextColor="{Binding Win, Converter={StaticResource boolToColorConverter}}" HorizontalOptions="Start" VerticalTextAlignment="End" />
 		<Label Grid.Row="1" Grid.Column="1" FontSize="12" Text="{Binding GameMode}" HorizontalOptions="Start" VerticalTextAlignment="Center" TextColor="Gray" />
 		<Label Grid.Row="2" Grid.Column="1" FontSize="16" Text="{Binding KDAText}" HorizontalOptions="Start" VerticalTextAlignment="Start" />
 

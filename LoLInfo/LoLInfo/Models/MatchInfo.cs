@@ -5,6 +5,8 @@ namespace LoLInfo.Models
     {
         public string ChampionImage { get; set; }
 
+        public bool Win { get; set; }
+
         public string WinLossText { get; set; }
 
         public string GameMode { get; set; }
