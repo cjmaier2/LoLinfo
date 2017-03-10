@@ -15,16 +15,30 @@ namespace LoLInfo.ViewModels
             {
                 return Regions[RegionCodeIndex];
             }
+            set
+            {
+                RegionCodeIndex = Regions.IndexOf(value);
+            }
         }
 
         public SettingsViewModel()
         {
-            
+            SummonerName = AppSettings.GetValueOrDefault<string>(Constants.SummonerNameSettingsKey, string.Empty);
+            RegionCode = AppSettings.GetValueOrDefault<string>(Constants.RegionCodeSettingsKey, string.Empty);
         }
 
         public bool SaveSettings()
         {
-            return true;
+            try
+            {
+                AppSettings.AddOrUpdateValue<string>(Constants.SummonerNameSettingsKey, SummonerName);
+                AppSettings.AddOrUpdateValue<string>(Constants.RegionCodeSettingsKey, RegionCode);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

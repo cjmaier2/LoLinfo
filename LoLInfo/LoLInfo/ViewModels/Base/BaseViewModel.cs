@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using LoLInfo.Services;
+using Plugin.Settings;
+using Plugin.Settings.Abstractions;
 
 namespace LoLInfo.ViewModels
 {
@@ -24,6 +26,14 @@ namespace LoLInfo.ViewModels
             {
                 isBusy = value;
                 OnPropertyChanged();
+            }
+        }
+
+        protected static ISettings AppSettings
+        {
+            get
+            {
+                return CrossSettings.Current;
             }
         }
 

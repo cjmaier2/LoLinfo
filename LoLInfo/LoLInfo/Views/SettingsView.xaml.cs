@@ -18,7 +18,7 @@ namespace LoLInfo.Views
             {
                 regionPicker.Items.Add(region);
             }
-            regionPicker.SelectedIndex = 0;
+            regionPicker.SelectedIndex = ViewModel.RegionCodeIndex;
 
             ToolbarItems.Add(new ToolbarItem("Save", "ic_save.png", () =>
             {

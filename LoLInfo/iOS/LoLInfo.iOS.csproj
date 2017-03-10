@@ -116,6 +116,12 @@
     <Reference Include="FFImageLoading.Forms.Touch">
       <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.8\lib\Xamarin.iOS10\FFImageLoading.Forms.Touch.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoLInfo\LoLInfo.csproj">
@@ -145,6 +151,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="CustomRenderers\CustomSearchBarRenderer.cs" />
+    <Compile Include="Helpers\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_face_2x.png" />

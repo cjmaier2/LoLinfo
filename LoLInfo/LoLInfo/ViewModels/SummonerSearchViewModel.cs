@@ -21,7 +21,9 @@ namespace LoLInfo.ViewModels
 
         public async Task<List<MatchInfo>> GetMyMatchHistory()
         {
-            return await GetMatchHistory("", "");
+            var summonerName = AppSettings.GetValueOrDefault<string>(Constants.SummonerNameSettingsKey, string.Empty);
+            var regionCode = AppSettings.GetValueOrDefault<string>(Constants.RegionCodeSettingsKey, string.Empty);
+            return await GetMatchHistory(summonerName, regionCode);
         }
 
         public async Task<List<MatchInfo>> GetMatchHistory(string summonerName, string regionCode)

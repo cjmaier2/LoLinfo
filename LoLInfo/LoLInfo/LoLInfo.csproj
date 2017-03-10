@@ -136,6 +136,8 @@
       <DependentUpon>MatchHistoryView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Custom\Converters\BoolToColorConverter.cs" />
+    <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="ViewModels\Constants.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -160,6 +162,12 @@
     </Reference>
     <Reference Include="FFImageLoading.Forms">
       <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.8\lib\portable-net45+win8+wpa81+wp8\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.2.5.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
