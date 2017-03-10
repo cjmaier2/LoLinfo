@@ -13,7 +13,7 @@
 					Property=Height,Factor=.1, Constant=0}"
 				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
 					Property=Width,Factor=.8,Constant=0}">
-				<Entry x:Name="searchInput" HorizontalOptions="StartAndExpand" Placeholder="Summoner Name"/>
+				<Entry x:Name="searchInput" HorizontalOptions="FillAndExpand" Placeholder="Summoner Name"/>
 				<Picker x:Name="regionPicker"/>
 			</StackLayout>
 			<Button Text="Search" Clicked="OnSearchClicked"
