@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using LoLInfo.Services;
 
 namespace LoLInfo.Services
@@ -25,8 +26,24 @@ namespace LoLInfo.Services
         public const string Russia = "RU";
         public const string Turkey = "TR";
 
+        public static List<string> Regions = new List<string>
+        {
+            NorthAmerica,
+            Korea,
+            Brazil,
+            EuropeNordicAndEast,
+            EuropeWest,
+            Japan,
+            LatinAmericaNorth,
+            LatinAmericaSouth,
+            Oceania,
+            Russia,
+            Turkey
+        };
+
         //Service Call URLs
-        public const string BaseApiUrl = "https://global.api.pvp.net";
+        public const string BaseStaticDataApiUrl = "https://global.api.pvp.net";
+        public const string BaseRegionDataApiUrl = "https://{0}.api.pvp.net"; //input: region
         public const string GetChampionsUrl = "/api/lol/static-data/{0}/v1.2/champion"; //input: region
         public const string GetItemsUrl = "/api/lol/static-data/{0}/v1.2/item"; //input: region
         public const string GetSummonerIdUrl = "/api/lol/{0}/v1.4/summoner/by-name/{1}"; //inputs: region, comma-separated summoner name(s)

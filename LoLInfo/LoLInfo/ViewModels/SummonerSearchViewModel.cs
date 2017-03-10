@@ -14,12 +14,20 @@ namespace LoLInfo.ViewModels
         ItemService ItemService { get; } = new ItemService();
         SummonerService SummonerService { get; } = new SummonerService();
 
+        public List<string> Regions
+        {
+            get
+            {
+                return ServiceConstants.Regions;
+            }
+        }
+
         public SummonerSearchViewModel()
         {
             
         }
 
-        public async Task<List<MatchInfo>> GetMatchHistory(string summonerName)
+        public async Task<List<MatchInfo>> GetMatchHistory(string summonerName, string regionCode)
         {
             try
             {
@@ -28,7 +36,7 @@ namespace LoLInfo.ViewModels
                     await ChampionService.GetChampions(); //need champion image urls for match historys
                 if (ItemService.ItemImageDictionary == null || ItemService.ItemImageDictionary.Count == 0)
                     await ItemService.GetItems(); //need item image urls for match history
-                var matchHistory = await SummonerService.GetMatchHistory(summonerName);
+                var matchHistory = await SummonerService.GetMatchHistory(summonerName, regionCode);
                 return matchHistory;
             }
             catch (Exception ex)

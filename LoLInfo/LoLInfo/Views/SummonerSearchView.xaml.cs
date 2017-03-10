@@ -12,6 +12,12 @@ namespace LoLInfo.Views
         public SummonerSearchView()
         {
             InitializeComponent();
+
+            foreach (var region in ViewModel.Regions)
+            {
+                regionPicker.Items.Add(region);
+            }
+            regionPicker.SelectedIndex = 0;
         }
 
         async void OnSearchClicked(object sender, EventArgs args)
@@ -19,7 +25,7 @@ namespace LoLInfo.Views
             var searchText = searchInput.Text;
             if (!string.IsNullOrWhiteSpace(searchText))
             {
-                var matchHistory = await ViewModel.GetMatchHistory(searchText);
+                var matchHistory = await ViewModel.GetMatchHistory(searchText, regionPicker.Items[regionPicker.SelectedIndex]);
                 if (matchHistory == null)
                 {
                     await DisplayAlert("Error", "Failed to retrieve match history", "OK");
