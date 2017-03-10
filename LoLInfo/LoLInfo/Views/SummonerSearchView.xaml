@@ -16,13 +16,28 @@
 				<Entry x:Name="searchInput" HorizontalOptions="FillAndExpand" Placeholder="Summoner Name"/>
 				<Picker x:Name="regionPicker"/>
 			</StackLayout>
-			<Button Text="Search" Clicked="OnSearchClicked"
+			<Button x:Name="searchButton" Text="Search" Clicked="OnSearchClicked"
 		        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
 		            ElementName=searchParams,Property=X,Factor=1,Constant=0}"
 				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
 		            ElementName=searchParams,Property=Y,Factor=1,Constant=40}"
 		        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
 					ElementName=searchParams,Property=Width,Factor=1,Constant=0}"/>
+			<Button x:Name="myMatchHistoryButton" Text="Get My Match History" Clicked="OnMyMatchHistoryClicked"
+		        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+		            ElementName=searchButton,Property=X,Factor=1,Constant=0}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+		            ElementName=searchButton,Property=Y,Factor=1,Constant=40}"
+		        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=searchButton,Property=Width,Factor=1,Constant=0}"/>
+			
+			<ActivityIndicator IsRunning="{Binding IsBusy}"
+	        	RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+		            ElementName=myMatchHistoryButton,Property=X,Factor=1,Constant=0}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+		            ElementName=myMatchHistoryButton,Property=Y,Factor=1,Constant=80}"
+		        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,
+					ElementName=myMatchHistoryButton,Property=Width,Factor=1,Constant=0}"/>
 		</RelativeLayout>
 	</ContentPage.Content>
 </local:SummonerSearchViewBase>

@@ -36,5 +36,18 @@ namespace LoLInfo.Views
                 }
             }
         }
+
+        async void OnMyMatchHistoryClicked(object sender, EventArgs args)
+        {
+            var matchHistory = await ViewModel.GetMyMatchHistory();
+            if (matchHistory == null)
+            {
+                await DisplayAlert("Error", "Failed to retrieve match history", "OK");
+            }
+            else
+            {
+                await Navigation.PushAsync(new MatchHistoryView(matchHistory));
+            }
+        }
     }
 }
