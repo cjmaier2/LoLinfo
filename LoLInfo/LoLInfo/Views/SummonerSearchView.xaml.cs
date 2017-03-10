@@ -20,6 +20,13 @@ namespace LoLInfo.Views
             regionPicker.SelectedIndex = 0;
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            searchInput.Text = string.Empty;
+        }
+
         async void OnSearchClicked(object sender, EventArgs args)
         {
             var searchText = searchInput.Text;
