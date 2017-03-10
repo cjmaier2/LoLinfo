@@ -32,7 +32,9 @@ namespace LoLInfo.Views
                 }
                 else
                 {
-                    await Navigation.PushAsync(new MatchHistoryView(matchHistory));
+                    var matchHistoryView = new MatchHistoryView(matchHistory);
+                    matchHistoryView.Title = searchInput.Text;
+                    await Navigation.PushAsync(matchHistoryView);
                 }
             }
         }
@@ -46,7 +48,9 @@ namespace LoLInfo.Views
             }
             else
             {
-                await Navigation.PushAsync(new MatchHistoryView(matchHistory));
+                var matchHistoryView = new MatchHistoryView(matchHistory);
+                matchHistoryView.Title = "My Matches";
+                await Navigation.PushAsync(matchHistoryView);
             }
         }
     }
