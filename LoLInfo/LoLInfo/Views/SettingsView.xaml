@@ -7,8 +7,17 @@
 		xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
 		Title="Settings">
 	<ContentPage.Content>
-		<StackLayout Orientation="Vertical">
-			
-		</StackLayout>
+		<RelativeLayout>
+			<StackLayout x:Name="searchParams" Orientation="Horizontal"
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+					Property=Width,Factor=.1, Constant=0}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+					Property=Height,Factor=.1, Constant=0}"
+				RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+					Property=Width,Factor=.8,Constant=0}">
+				<Entry x:Name="searchInput" HorizontalOptions="FillAndExpand" Placeholder="Summoner Name" Text="{Binding SummonerName}"/>
+				<Picker x:Name="regionPicker" WidthRequest="50" SelectedIndex="{Binding RegionCodeIndex}"/>
+			</StackLayout>
+		</RelativeLayout>
 	</ContentPage.Content>
 </local:SettingsViewBase>

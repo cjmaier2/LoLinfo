@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using LoLInfo.Services;
 
 namespace LoLInfo.ViewModels
 {
@@ -22,6 +24,14 @@ namespace LoLInfo.ViewModels
             {
                 isBusy = value;
                 OnPropertyChanged();
+            }
+        }
+
+        public List<string> Regions
+        {
+            get
+            {
+                return ServiceConstants.Regions;
             }
         }
     }

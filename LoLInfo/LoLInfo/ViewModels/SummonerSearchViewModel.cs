@@ -14,14 +14,6 @@ namespace LoLInfo.ViewModels
         ItemService ItemService { get; } = new ItemService();
         SummonerService SummonerService { get; } = new SummonerService();
 
-        public List<string> Regions
-        {
-            get
-            {
-                return ServiceConstants.Regions;
-            }
-        }
-
         public SummonerSearchViewModel()
         {
             
