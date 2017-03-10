@@ -22,15 +22,15 @@ namespace LoLInfo.Views
             });
             masterPageItems.Add(new MasterPageItem
             {
-                Title = "About",
-                IconSource = "ic_info_outline.png",
-                TargetType = typeof(AboutView)
-            });
-            masterPageItems.Add(new MasterPageItem
-            {
                 Title = "Settings",
                 IconSource = "ic_settings.png",
                 TargetType = typeof(SettingsView)
+            });
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "About",
+                IconSource = "ic_info_outline.png",
+                TargetType = typeof(AboutView)
             });
 
             listView.ItemsSource = masterPageItems;
